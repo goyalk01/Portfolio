@@ -1,73 +1,86 @@
-# React + TypeScript + Vite
+# Krish Goyal — Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the source code of my personal portfolio website! 🚀
 
-Currently, two official plugins are available:
+This is a modern, highly interactive web application built to showcase my projects, skills, education, and achievements. I designed it to be fast, responsive, and visually engaging, using a custom glassmorphism aesthetic with subtle glowing effects and a 3D particle background.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+You can view the live site here: **[Your Portfolio URL Here]**
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Modern UI/UX**: Built with a sleek dark mode, glassmorphic cards, and dynamic gradient text.
+- **Interactive Animations**: Smooth scroll effects, custom glow cursor, and page transitions powered by Framer Motion.
+- **3D Background**: A lightweight, performant interactive particle system built with Three.js.
+- **Dynamic Content Architecture**: The data (projects, skills, timeline) is entirely decoupled from the UI components via a centralized `master_profile.json`, making it extremely easy to update.
+- **Responsive Design**: Flawless experience across desktops, tablets, and mobile devices.
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Frontend
+- **React 19**
+- **TypeScript**
+- **Vite 7**
+- **Tailwind CSS v4**
+- **Framer Motion** (Animations)
+- **Three.js / React Three Fiber** (3D Graphics)
+- **Lucide React** (Icons)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Running Locally
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+If you'd like to run this project on your local machine:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/goyalk01/Portfolio.git
+   cd Portfolio
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open in browser:**
+   Navigate to `http://localhost:5173`
+
+## 🏗️ Building for Production
+
+To create an optimized production build:
+
+```bash
+npm run build
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+This will run TypeScript type checking and bundle the application into the `dist` directory using Vite. You can preview the production build using:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run preview
 ```
+
+## 📂 Project Structure
+
+```text
+├── src/
+│   ├── components/      # Reusable React components (UI, layout, sections)
+│   ├── data/            # Centralized JSON profile data
+│   ├── lib/             # Data adapters and helper functions
+│   ├── pages/           # Route-level components
+│   ├── types/           # TypeScript interfaces
+│   ├── App.tsx          # Main application routing
+│   └── index.css        # Global styles and Tailwind configuration
+```
+
+## 📫 Connect With Me
+
+- **GitHub**: [@goyalk01](https://github.com/goyalk01)
+- **LinkedIn**: [Krish Goyal](https://linkedin.com/in/goyalk01)
+- **Email**: goyalk01@example.com *(Replace with real email)*
+
+---
+
+*Designed and developed by Krish Goyal. Feel free to use this as inspiration, but please don't clone and claim it as your own!*
