@@ -1,0 +1,86 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MasterProfile",
+  "type": "object",
+  "required": ["name", "headline", "summary", "contact", "metrics", "projects", "skills"],
+  "properties": {
+    "name": { "type": "string" },
+    "cgpa": { "type": ["number", "null"] },
+    "headline": { "type": "string" },
+    "summary": { "type": "string" },
+    "contact": {
+      "type": "object",
+      "required": ["email", "linkedin", "github", "leetcode"],
+      "properties": {
+        "email": { "type": "string", "format": "email" },
+        "linkedin": { "type": "string", "format": "uri" },
+        "github": { "type": "string", "format": "uri" },
+        "leetcode": { "type": "string", "format": "uri" }
+      }
+    },
+    "metrics": {
+      "type": "object",
+      "properties": {
+        "github_stars": { "type": "integer" },
+        "github_repos": { "type": "integer" },
+        "leetcode_solved": { "type": "integer" },
+        "leetcode_hard": { "type": "integer" },
+        "leetcode_medium": { "type": "integer" }
+      }
+    },
+    "skills": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["title", "description"],
+        "properties": {
+          "title": { "type": "string" },
+          "description": { "type": "string" },
+          "tech_stack": { "type": "array", "items": { "type": "string" } },
+          "url": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "experience": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "company": { "type": "string" },
+          "title": { "type": "string" },
+          "duration": { "type": "string" },
+          "description": { "type": "string" }
+        }
+      }
+    },
+    "education": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "school": { "type": "string" },
+          "degree": { "type": "string" },
+          "duration": { "type": "string" }
+        }
+      }
+    },
+    "certifications": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": { "type": "string" },
+          "issuer": { "type": "string" }
+        }
+      }
+    },
+    "achievements": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

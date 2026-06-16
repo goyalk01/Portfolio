@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: portfolio-intelligence-api
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: "cd agents && pip install -r requirements.txt"
+    startCommand: "cd agents && uvicorn api.main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: PYTHON_VERSION
+        value: 3.10.0
+
+  - type: cron
+    name: portfolio-sync-job
+    env: python
+    region: oregon
+    plan: free
+    schedule: "0 0 1,15 * *" # 1st and 15th of every month
+    buildCommand: "cd agents && pip install -r requirements.txt"
+    startCommand: "cd agents && python generator.py && python audit_agent.py"
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false

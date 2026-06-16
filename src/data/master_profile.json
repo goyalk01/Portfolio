@@ -1,0 +1,190 @@
+{
+  "name": "Krish Goyal",
+  "cgpa": 8.82,
+  "headline": "Software Engineer • AI/ML • Cloud • Systems",
+  "summary": "Curious Computer Science student passionate about building intelligent systems.",
+  "contact": {
+    "email": "krishaggarwal1452@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/krish-goyal-b58a31320",
+    "github": "https://github.com/goyalk01",
+    "leetcode": "https://leetcode.com/u/Goyalk"
+  },
+  "metrics": {
+    "github_stars": 0,
+    "github_repos": 0,
+    "leetcode_solved": 0,
+    "leetcode_hard": 0,
+    "leetcode_medium": 0
+  },
+  "top_projects": [
+    "CASCADE",
+    "Driver Drowsiness Detection System",
+    "IoT Intrusion Detection System"
+  ],
+  "projects": [
+    {
+      "title": "CASCADE",
+      "description": "AI-Powered Self-Healing Multi-Agent Workflow Engine featuring a DAG Workflow Engine, ReAct Controller, and Cloud Deployment Architecture.",
+      "tech_stack": [
+        "Python",
+        "FastAPI",
+        "React",
+        "Vertex AI",
+        "Gemini",
+        "MCP",
+        "Firestore",
+        "Cloud Run"
+      ],
+      "category": "ai-ml",
+      "url": "https://github.com/goyalk01/cascade"
+    },
+    {
+      "title": "Driver Drowsiness Detection System",
+      "description": "Real-time inference system trained on 27,000+ samples achieving 84.9% training and 82.3% validation accuracy.",
+      "tech_stack": [
+        "TensorFlow",
+        "OpenCV",
+        "dlib",
+        "CUDA"
+      ],
+      "category": "ai-ml",
+      "url": "https://github.com/goyalk01"
+    },
+    {
+      "title": "IoT Intrusion Detection System",
+      "description": "Cybersecurity tool for anomaly detection, IoT traffic analysis, threat detection, and attack classification.",
+      "tech_stack": [
+        "Cybersecurity",
+        "Network Monitoring",
+        "Anomaly Detection"
+      ],
+      "category": "security",
+      "url": "https://github.com/goyalk01"
+    },
+    {
+      "title": "LSTM Stock Prediction Dashboard",
+      "description": "Time-series forecasting dashboard utilizing LSTM models and technical indicators.",
+      "tech_stack": [
+        "LSTM",
+        "Time-Series",
+        "Machine Learning"
+      ],
+      "category": "ai-ml",
+      "url": "https://github.com/goyalk01"
+    },
+    {
+      "title": "Hackora AEGIS",
+      "description": "Cyber Threat Monitoring Dashboard providing threat scoring, continuous monitoring, and security analytics.",
+      "tech_stack": [
+        "Cybersecurity",
+        "Analytics",
+        "Monitoring"
+      ],
+      "category": "security",
+      "url": "https://github.com/goyalk01"
+    },
+    {
+      "title": "GreenPulse",
+      "description": "AI-Powered Sustainability Intelligence Platform for analytics and environmental intelligence.",
+      "tech_stack": [
+        "AI",
+        "Sustainability",
+        "Analytics"
+      ],
+      "category": "web",
+      "url": "https://github.com/goyalk01"
+    }
+  ],
+  "experience": [
+    {
+      "company": "Google Cloud",
+      "title": "GenAI Virtual Internship",
+      "duration": "Nov 2025 – Jan 2026",
+      "description": "Gained hands-on experience with Vertex AI, Gemini API, RAG, Vector Search, and Prompt Engineering, focusing on practical implementation of Generative AI systems."
+    },
+    {
+      "company": "ServiceNow",
+      "title": "Virtual Internship",
+      "duration": "May 2026",
+      "description": "Explored Agentic AI, Workflow Automation, and Enterprise Platforms within the ServiceNow Ecosystem."
+    }
+  ],
+  "education": [
+    {
+      "school": "VIT Bhopal University",
+      "degree": "B.Tech CSE",
+      "duration": "2024 - 2028"
+    }
+  ],
+  "skills": [
+    "Python",
+    "Java",
+    "C++",
+    "C",
+    "JavaScript",
+    "TypeScript",
+    "HTML / CSS",
+    "OpenCV",
+    "RAG",
+    "Vertex AI",
+    "Gemini API",
+    "Machine Learning",
+    "Deep Learning",
+    "LSTM",
+    "Computer Vision",
+    "dlib",
+    "React",
+    "HTML",
+    "CSS",
+    "Tailwind CSS",
+    "FastAPI",
+    "REST APIs",
+    "Google Cloud",
+    "Cloud Run",
+    "Firestore",
+    "Oracle Cloud",
+    "Docker",
+    "Git & GitHub",
+    "VS Code",
+    "Linux",
+    "DSA"
+  ],
+  "certifications": [
+    {
+      "title": "Cloud Computing",
+      "issuer": "NPTEL IIT Kharagpur",
+      "year": "2025",
+      "badge": "elite"
+    },
+    {
+      "title": "Oracle Cloud Infrastructure Networking Professional",
+      "issuer": "Oracle",
+      "year": "2025",
+      "badge": "professional"
+    },
+    {
+      "title": "Prompt Design in Vertex AI",
+      "issuer": "Google Cloud",
+      "year": "2025",
+      "badge": "verified"
+    },
+    {
+      "title": "Multimodal RAG with Gemini",
+      "issuer": "Google Cloud",
+      "year": "2025",
+      "badge": "verified"
+    },
+    {
+      "title": "Generative AI in Software Development",
+      "issuer": "Google Cloud",
+      "year": "2025",
+      "badge": "verified"
+    }
+  ],
+  "achievements": [
+    "8.82 CGPA — B.Tech Computer Science & Engineering at VIT Bhopal University",
+    "Top 3% — Ranked 1283 out of 43,539 in GirlScript Summer of Code",
+    "Top 45 — Led a team of 6 among 900+ competing teams in college in Smart India Hackathon",
+    "3+ Hackathon Finals — Advanced in major competitions including Rosetta Code & SoIVIT"
+  ]
+}
