@@ -1,5 +1,6 @@
 import { Canvas } from "@react-three/fiber";
 import Particles from "./Particles";
+import HumanConstellation from "./HumanConstellation";
 
 export default function ParticleBackground() {
   return (
@@ -12,6 +13,7 @@ export default function ParticleBackground() {
         <ambientLight intensity={0.05} />
         <pointLight position={[10, 10, 10]} color="#ffffff" intensity={0.3} />
         <Particles />
+        <HumanConstellation />
       </Canvas>
     </div>
   );

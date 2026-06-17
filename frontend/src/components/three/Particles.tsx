@@ -2,6 +2,17 @@ import { useRef, useMemo } from "react";
 import { useFrame } from "@react-three/fiber";
 import type * as THREE from "three";
 
+function createSeededRandom(seed: number): () => number {
+  let state = seed;
+
+  return () => {
+    state = (state * 1664525 + 1013904223) % 4294967296;
+    return state / 4294967296;
+  };
+}
+
+const rand = createSeededRandom(42);
+
 export default function Particles({ count = 2000 }: { count?: number }) {
   const meshRef = useRef<THREE.Points>(null);
 
@@ -10,14 +21,14 @@ export default function Particles({ count = 2000 }: { count?: number }) {
     const sz = new Float32Array(count);
     for (let i = 0; i < count; i++) {
       // Spread stars in a large sphere
-      const theta = Math.random() * Math.PI * 2;
-      const phi = Math.acos(2 * Math.random() - 1);
-      const r = 8 + Math.random() * 25;
+      const theta = rand() * Math.PI * 2;
+      const phi = Math.acos(2 * rand() - 1);
+      const r = 8 + rand() * 25;
       pos[i * 3] = r * Math.sin(phi) * Math.cos(theta);
       pos[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta);
       pos[i * 3 + 2] = r * Math.cos(phi);
       // Varied star sizes for depth
-      sz[i] = 0.015 + Math.random() * 0.06;
+      sz[i] = 0.015 + rand() * 0.06;
     }
     return { positions: pos, sizes: sz };
   }, [count]);
@@ -26,7 +37,7 @@ export default function Particles({ count = 2000 }: { count?: number }) {
   const twinkleOffsets = useMemo(() => {
     const offsets = new Float32Array(count);
     for (let i = 0; i < count; i++) {
-      offsets[i] = Math.random() * Math.PI * 2;
+      offsets[i] = rand() * Math.PI * 2;
     }
     return offsets;
   }, [count]);
