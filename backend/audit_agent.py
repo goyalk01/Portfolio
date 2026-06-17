@@ -4,7 +4,7 @@ from datetime import datetime
 
 def audit_portfolio():
     try:
-        with open("../src/data/master_profile.json", "r") as f:
+        with open("../frontend/src/data/master_profile.json", "r") as f:
             profile = json.load(f)
     except FileNotFoundError:
         print("Master profile not found. Run generator.py first.")
@@ -29,8 +29,8 @@ def audit_portfolio():
     if len(skills) == 0: missing_items.append("skills")
         
     # Check physical assets
-    if not os.path.exists("../public/resume.pdf"): missing_items.append("resume_pdf")
-    if not os.path.exists("../public/profile.jpg"): missing_items.append("profile_photo")
+    if not os.path.exists("../frontend/public/resume.pdf"): missing_items.append("resume_pdf")
+    if not os.path.exists("../frontend/public/profile.jpg"): missing_items.append("profile_photo")
     
     # Calculate Component Scores
     github_score = min(profile.get("metrics", {}).get("github_repos", 0) * 5 + profile.get("metrics", {}).get("github_stars", 0) * 10, 100)

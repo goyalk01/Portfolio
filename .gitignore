@@ -7,12 +7,12 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-# Dependencies and Build Outputs
-node_modules/
-dist/
-dist-ssr/
-build/
-coverage/
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/build/
+frontend/coverage/
 
 # Environment variables
 .env
@@ -20,7 +20,7 @@ coverage/
 .env.development.local
 .env.test.local
 .env.production.local
-agents/.env
+backend/.env
 
 # Editor directories and files
 .vscode/*
@@ -35,9 +35,9 @@ agents/.env
 *.sw?
 
 # Python
-agents/venv/
-agents/__pycache__/
-agents/**/__pycache__/
+backend/venv/
+backend/__pycache__/
+backend/**/__pycache__/
 *.pyc
 *.pyo
 *.pyd
@@ -46,7 +46,7 @@ env/
 venv/
 ENV/
 
-# Agent generated outputs
-agents/outputs/
-agents/data/
-agents/inputs/
+# Backend generated outputs
+backend/outputs/
+backend/data/
+backend/inputs/

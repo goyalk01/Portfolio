@@ -65,7 +65,7 @@ def analyze_repos_with_gemini(repos):
     
     try:
         response = client.models.generate_content(
-            model='gemini-2.5-flash',
+            model='gemini-flash-lite-latest',
             contents=prompt,
         )
         

@@ -4,8 +4,8 @@ services:
     env: python
     region: oregon
     plan: free
-    buildCommand: "cd agents && pip install -r requirements.txt"
-    startCommand: "cd agents && uvicorn api.main:app --host 0.0.0.0 --port $PORT"
+    buildCommand: "cd backend && pip install -r requirements.txt"
+    startCommand: "cd backend && uvicorn api.main:app --host 0.0.0.0 --port $PORT"
     envVars:
       - key: GEMINI_API_KEY
         sync: false
@@ -18,8 +18,8 @@ services:
     region: oregon
     plan: free
     schedule: "0 0 1,15 * *" # 1st and 15th of every month
-    buildCommand: "cd agents && pip install -r requirements.txt"
-    startCommand: "cd agents && python generator.py && python audit_agent.py"
+    buildCommand: "cd backend && pip install -r requirements.txt"
+    startCommand: "cd backend && python generator.py && python audit_agent.py"
     envVars:
       - key: GEMINI_API_KEY
         sync: false

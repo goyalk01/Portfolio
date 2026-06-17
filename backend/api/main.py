@@ -21,7 +21,7 @@ app.add_middleware(
 )
 
 def load_master_profile():
-    path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "src", "data", "master_profile.json")
+    path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "frontend", "src", "data", "master_profile.json")
     if not os.path.exists(path):
         raise HTTPException(status_code=404, detail="Master profile not found. Have you run the sync pipeline?")
     with open(path, "r") as f:
@@ -65,7 +65,7 @@ def trigger_sync():
         profile = merge_data()
         
         # Output to React src/data
-        output_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "src", "data", "master_profile.json")
+        output_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "frontend", "src", "data", "master_profile.json")
         with open(output_path, "w") as f:
             json.dump(profile, f, indent=2)
             

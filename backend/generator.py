@@ -90,7 +90,7 @@ if __name__ == "__main__":
         print(f"⚠️ Could not load schema for validation: {e}")
         
     # 2. Output to React src/data
-    output_path = "../src/data/master_profile.json"
+    output_path = "../frontend/src/data/master_profile.json"
     with open(output_path, "w") as f:
         json.dump(profile, f, indent=2)
     print(f"Successfully generated {output_path}")
